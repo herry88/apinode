@@ -53,13 +53,13 @@ const requestListener = (request, response) => {
         response.statusCode = 404;
         response.end('<h1>Halaman tidak ditemukan!</h1>');
 
-                response.end(`<h1>Halo, ${name}! Ini adalah halaman about</h1>`);
-            });
-        } else {
-            response.end(`<h1>Halaman tidak dapat diakses menggunakan ${method} request</h1>`);
-        }
+        response.end('<h1>Halo, ${name}! Ini adalah halaman about</h1>');
     } else {
-        response.end('<h1>Halaman tidak ditemukan!</h1>');
+    response.end('<h1>Halaman tidak dapat diakses menggunakan ${method} request</h1>');
+        
+    }else {
+    response.end('<h1>Halaman tidak ditemukan!</h1>');
+    
 
     const { method } = request;
 
